@@ -14,6 +14,7 @@ export default function _layout() {
                     headerTitle: props => <LibraryHeader {...props} />,
                     title: 'Home',
                     tabBarIcon: ({ color }) => <Foundation size={28} name="home" color={color} />,
+                    headerShown:false
                 }}
             />
             <Tabs.Screen
