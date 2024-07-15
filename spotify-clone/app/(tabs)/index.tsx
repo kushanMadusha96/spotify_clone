@@ -1,23 +1,22 @@
 import HomeArtistCircle from "@/components/HomeArtistCircle";
 import HomeMusicSqure from "@/components/HomeMusicSqure";
+import LibraryHeader from "@/components/LibraryHeader";
 import MinimizePlayer from "@/components/MinimizePlayer";
 import HomeScreen from "@/screens/HomeScreen";
+import LibraryScreen from "@/screens/LibraryScreen";
 import { Text, View, StyleSheet } from "react-native";
 
 export default function Index() {
   return (
-    <View
-      style={styles.container}>
-      <HomeScreen/>
-      <MinimizePlayer/>
+    <View style={styles.container}>
+      <LibraryScreen/>
     </View>
-  );
+  )
 }
 
 const styles = StyleSheet.create({
-  container : {
+  container: {
     flex: 1,
-    // justifyContent: "center",
-    // alignItems: "center"
+    backgroundColor: '#000000'
   }
-})
+});
