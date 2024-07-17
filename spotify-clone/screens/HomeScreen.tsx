@@ -3,50 +3,51 @@ import React from 'react'
 import HomeMusicSqure from '@/components/HomeMusicSqure'
 import { FlashList } from '@shopify/flash-list'
 import HomeArtistCircle from '@/components/HomeArtistCircle'
+import { router } from 'expo-router'
 
 export default function HomeScreen() {
-  const DATA = [
+  const STARTED = [
     {
-      id: <HomeMusicSqure />
+      id: <HomeMusicSqure op={() => router.push('/started_music')} />
     },
     {
-      id: <HomeMusicSqure />
+      id: <HomeMusicSqure op={() => router.push('/started_music')} />
     },
     {
-      id: <HomeMusicSqure />
+      id: <HomeMusicSqure op={() => router.push('/started_music')} />
     },
     {
-      id: <HomeMusicSqure />
-    }
+      id: <HomeMusicSqure op={() => router.push('/started_music')} />
+    },
   ]
 
   const FRESH_MUSIC = [
     {
-      id: <HomeMusicSqure />
+      id: <HomeMusicSqure op={() => router.push('/fresh_music')} />
     },
     {
-      id: <HomeMusicSqure />
+      id: <HomeMusicSqure op={() => router.push('/fresh_music')} />
     },
     {
-      id: <HomeMusicSqure />
+      id: <HomeMusicSqure op={() => router.push('/fresh_music')} />
     },
     {
-      id: <HomeMusicSqure />
+      id: <HomeMusicSqure op={() => router.push('/fresh_music')} />
     }
   ]
 
   const ARTIST_DATA = [
     {
-      id: <HomeArtistCircle />
+      id: <HomeArtistCircle op={() => router.push('/started_music_second')}/>
     },
     {
-      id: <HomeArtistCircle />
+      id: <HomeArtistCircle op={() => router.push('/started_music_second')}/>
     },
     {
-      id: <HomeArtistCircle />
+      id: <HomeArtistCircle op={() => router.push('/started_music_second')}/>
     },
     {
-      id: <HomeArtistCircle />
+      id: <HomeArtistCircle op={() => router.push('/started_music_second')}/>
     }
   ]
 
@@ -55,7 +56,7 @@ export default function HomeScreen() {
       <ScrollView>
         <Text style={styles.title}>To get you started</Text>
         <FlashList
-          data={DATA}
+          data={STARTED}
           renderItem={({ item }) => item.id}
           estimatedItemSize={200}
           horizontal={true}
@@ -76,14 +77,14 @@ export default function HomeScreen() {
         />
         <Text style={styles.title}>Mood</Text>
         <FlashList
-          data={FRESH_MUSIC}
+          data={STARTED}
           renderItem={({ item }) => item.id}
           estimatedItemSize={200}
           horizontal={true}
         />
         <Text style={styles.title}>Featured Charts</Text>
         <FlashList
-          data={FRESH_MUSIC}
+          data={STARTED}
           renderItem={({ item }) => item.id}
           estimatedItemSize={200}
           horizontal={true}

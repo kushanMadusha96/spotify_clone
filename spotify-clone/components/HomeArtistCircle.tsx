@@ -1,16 +1,15 @@
-import { View, Text, Image, StyleSheet } from 'react-native'
+import { View, Text, Image, StyleSheet, Pressable } from 'react-native'
 import React from 'react'
 
-export default function () {
+export default function (props : { op?: () => void }) {
     return (
-        <View style={styles.container}>
+        <Pressable style={styles.container} onPress={ props.op }>
             <Image
                 style={styles.artistImg}
                 source={require('../assets/images/singer.jpg')}
             />
             <Text style={styles.artistName}>Dilo</Text>
-
-        </View>
+        </Pressable>
     )
 }
 

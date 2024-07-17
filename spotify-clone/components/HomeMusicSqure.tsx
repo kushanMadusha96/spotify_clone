@@ -1,10 +1,10 @@
 import { View, Text, StyleSheet, Image, Pressable } from 'react-native'
 
-export default function HomeMusicSqure() {
+export default function HomeMusicSqure(props : {op?: () => void }) {
 
     return (
         <>
-            <Pressable style={styles.container}>
+            <Pressable style={styles.container} onPress={props.op}>
                 <Image
                     style={styles.artistImg}
                     source={require('../assets/images/singer.jpg')}

@@ -4,12 +4,13 @@ import LibraryHeader from "@/components/LibraryHeader";
 import MinimizePlayer from "@/components/MinimizePlayer";
 import HomeScreen from "@/screens/HomeScreen";
 import LibraryScreen from "@/screens/LibraryScreen";
+import SearchScreen from "@/screens/SearchScreen";
 import { Text, View, StyleSheet } from "react-native";
 
 export default function Index() {
   return (
     <View style={styles.container}>
-      <LibraryScreen/>
+      <HomeScreen/>
     </View>
   )
 }

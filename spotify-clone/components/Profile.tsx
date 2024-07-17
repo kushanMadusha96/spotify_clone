@@ -1,7 +1,8 @@
+import { MaterialCommunityIcons, MaterialIcons } from '@expo/vector-icons';
 import React, { useState } from 'react'
 import { Image, StyleSheet, Text, View } from 'react-native';
 
-export default function UserProfile(props: { w?: number, h?: number, bd?: number, ml?: number, mt?: number, txt_pl?: string, txt_un?: string }) {
+export default function UserProfile(props: { w?: number, h?: number, bd?: number, ml?: number, mt?: number, txt_pl?: string, txt_un?: string, icon?: string }) {
 
     return (
         <View style={[styles.container, { marginLeft: props.ml, marginTop: props.mt }]}>
@@ -13,6 +14,7 @@ export default function UserProfile(props: { w?: number, h?: number, bd?: number
                 <Text style={styles.txtPlaylist}>{props.txt_pl}</Text>
                 <Text style={styles.txtUsername}>{props.txt_un}</Text>
             </View>
+            <MaterialCommunityIcons name={props.icon} color="#ffffff" size={24} style={styles.dotIcon} />
         </View>
     );
 }
@@ -20,6 +22,7 @@ export default function UserProfile(props: { w?: number, h?: number, bd?: number
 const styles = StyleSheet.create({
     container: {
         flexDirection: 'row',
+        alignItems:'center'
     },
     textContainer: {
         alignSelf: 'center',
@@ -31,6 +34,10 @@ const styles = StyleSheet.create({
     txtUsername: {
         color: 'gray',
         marginTop: 1
+    },
+    dotIcon: {
+        position: 'absolute',
+        right: 20
     }
 });
 
